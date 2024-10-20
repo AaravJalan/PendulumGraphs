@@ -27,8 +27,8 @@ ax.text(0.905, 0.9, textstr, transform=ax.transAxes, fontsize=11,
         verticalalignment='top', bbox=props)
 
 # Adding labels and legend
-plt.xlabel(r'$t\text{ (}s\text{)}$', fontsize=13)
-plt.ylabel(r'$\theta\text{ (rad)}$', fontsize=13)
+plt.xlabel(r'$t\text{ / }s$', fontsize=13, labelpad=10)
+plt.ylabel(r'$\theta\text{ / } rad$', fontsize=13, labelpad=10)
 plt.legend(loc='upper right', fontsize=11)
 plt.grid(True, which='both', linestyle='--', linewidth=0.4)
 

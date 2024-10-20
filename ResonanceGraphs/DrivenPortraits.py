@@ -10,7 +10,7 @@ def model(Y, t):
     return [dxdt, dydt]
 
 # # Low Damping
-b, m, g, l, w, F, t0 = 0.2, 0.5, 9.8, 2.5, 1, 3, 0.1
+# b, m, g, l, w, F, t0 = 0.2, 0.5, 9.8, 2.5, 1, 3, 0.1
 
 # # High Damping
 # b, m, g, l, w, F, t0 = 0.5, 0.5, 9.8, 2.5, 1, 3, 0.1
@@ -62,16 +62,16 @@ plt.scatter(sol[dot_index, 0], sol[dot_index, 1], color='mediumblue', zorder=5)
 plt.plot(sol[:, 0], sol[:, 1], color='blue', linewidth=1.5, label='Solution Curve')
 
 # Adding Labels and Title
-plt.xlabel(r'$\theta \text{ }  (rad)$', fontsize=13)
-plt.ylabel(r'$\frac{d\theta}{dt} \text{ } \left(rad \text{ } s^{-1}\right)$', fontsize=13)
-plt.legend(fontsize=11)
+plt.xlabel(r'$\theta\text{ / } rad$', fontsize=17, labelpad=10)
+plt.ylabel(r'$\frac{d\theta}{dt} \text{ / } rad \text{ } s^{-1}$', fontsize=17, labelpad=10)
+plt.legend(fontsize=12)
 plt.xlim(-2.5, 2.5)
 plt.ylim(-2.5, 2.5)
 
 # Customizing the Plot
 plt.xticks([-np.pi/2, 0, np.pi/2],
-           [r'$-\frac{\pi}{2}$', r'$0$', r'$\frac{\pi}{2}$'],fontsize=12)
-plt.yticks(np.arange(-2, 3, 1), fontsize=12)
+           [r'$-\frac{\pi}{2}$', r'$0$', r'$\frac{\pi}{2}$'],fontsize=20)
+plt.yticks(np.arange(-2, 3, 1), fontsize=20)
 
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)  
 

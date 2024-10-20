@@ -16,9 +16,8 @@ plt.plot(x, y_x, label=r'$\theta$', color='blue')
 plt.plot(x, y_sinx, label=r'$\sin(\theta)$', color='green')
 
 # Adding Labels and Legend
-plt.xlabel(r'$t\text{ y }s$', fontsize=13)
-plt.xlabel(r'$\theta\text{ / }\text{rad}$', fontsize=13)
-plt.ylabel('y')
+plt.xlabel(r'$\theta\text{ / } rad$', fontsize=13, labelpad=10)
+plt.ylabel(r'$y$', fontsize=13, labelpad=10)
 
 plt.ylim(0, 1)
 plt.xlim(0, 1)

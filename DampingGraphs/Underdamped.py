@@ -26,8 +26,8 @@ line2, = plt.plot(t, asymptote_a, color='red', label=r'$\pm e^{-\beta t}$', alph
 plt.plot(t, asymptote_b, color='red', alpha=0.2)  # This plot is not included in the legend
 
 # Adding labels and legend
-plt.xlabel(r'$t\text{ (}s\text{)}$', fontsize=13)
-plt.ylabel(r'$\theta\text{ (rad)}$', fontsize=13)
+plt.xlabel(r'$t\text{ / }s$', fontsize=13, labelpad=10)
+plt.ylabel(r'$\theta\text{ / } rad$', fontsize=13, labelpad=10)
 plt.legend(loc='upper right', fontsize=11)
 ax.grid(True)
 

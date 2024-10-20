@@ -65,19 +65,19 @@ textstr = '\n'.join((
 
 props = dict(boxstyle='round', facecolor='white', alpha=1, edgecolor='lightgrey')
 
-ax.text(0.905, 0.92, textstr, transform=ax.transAxes, fontsize=11.5,
+ax.text(0.89, 0.91, textstr, transform=ax.transAxes, fontsize=13,
         verticalalignment='top', bbox=props)
 
 # Adding Labels and Title
-plt.xlabel(r'$\theta \text{ }  (rad)$', fontsize=13)
-plt.ylabel(r'$\frac{d\theta}{dt} \text{ } \left(rad \text{ } s^{-1}\right)$', fontsize=13)
-plt.legend(fontsize=10)
+plt.xlabel(r'$\theta \text{ / }  rad$', fontsize=15, labelpad=7)
+plt.ylabel(r'$\frac{d\theta}{dt} \text{ / } rad \text{ } s^{-1}$', fontsize=15, labelpad=10)
+plt.legend(fontsize=12)
 plt.xlim(-np.pi/4, np.pi/2)
 plt.ylim(-1, 1)
 
 # Customizing the Plot
 plt.xticks([-np.pi/4,0, np.pi/4, np.pi/2],
-           [r'$-\frac{\pi}{4}$', r'$0$', r'$\frac{\pi}{4}$', r'$\frac{\pi}{2}$'], fontsize=12)
+           [r'$-\frac{\pi}{4}$', r'$0$', r'$\frac{\pi}{4}$', r'$\frac{\pi}{2}$'], fontsize=14)
 plt.yticks(np.arange(-1, 1.5, 0.5), fontsize=12)
 plt.grid(True, which='both', linestyle='--', linewidth=0.5)  
 

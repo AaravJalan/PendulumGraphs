@@ -69,8 +69,8 @@ ax.text(0.81, 0.9, textstr, transform=ax.transAxes, fontsize=11,
         verticalalignment='top', bbox=props)
 
 # Adding Labels and Title
-plt.xlabel(r'$\theta \text{ }  (rad)$', fontsize=13)
-plt.ylabel(r'$\frac{d\theta}{dt} \text{ } \left(rad \text{ } s^{-1}\right)$', fontsize=13)
+plt.xlabel(r'$\theta\text{ / } rad$', fontsize=13, labelpad=10)
+plt.ylabel(r'$\frac{d\theta}{dt} \text{ / } rad \text{ } s^{-1}$', fontsize=13, labelpad=10)
 plt.legend(fontsize=10)
 plt.xlim(-2, 2)
 plt.ylim(-2, 2)

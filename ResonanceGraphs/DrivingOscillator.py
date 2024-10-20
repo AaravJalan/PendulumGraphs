@@ -33,8 +33,8 @@ line2, = plt.plot(t, pt, label=r'External Driver', color='blue', linewidth=0.95)
 line3, = plt.plot(t, res, label=r'Resultant', color='black', linestyle='--')
 
 # Adding Labels and Title
-plt.xlabel(r'$\theta \text{ }  (rad)$', fontsize=13)
-plt.ylabel(r'$\frac{d\theta}{dt} \text{ } \left(rad \text{ } s^{-1}\right)$', fontsize=13)
+plt.xlabel(r'$t\text{ / }s$', fontsize=13, labelpad=10)
+plt.ylabel(r'$\theta\text{ / } rad$', fontsize=13, labelpad=10)
 plt.legend(loc='upper right', fontsize=11)
 ax.grid(True)
 

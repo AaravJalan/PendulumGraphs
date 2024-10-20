@@ -46,8 +46,8 @@ plt.plot(theta_values, T_values_a, label=r'$l = 5 \, \text{m}$', color='blue', l
 plt.axhline(T1_values, color='blue', linestyle='--', linewidth=1.25)
 
 # Add labels and legend
-plt.xlabel(r'$\theta_0$ ($\degree$)', fontsize=13)
-plt.ylabel(r'$T$ (s)', fontsize=13)
+plt.xlabel(r'$\theta_0 \text{ / }rad$', fontsize=13, labelpad=10)
+plt.ylabel(r'$T \text{ / } s$', fontsize=13, labelpad=13)
 plt.axhline(0, color='black', linewidth=0.5)
 plt.axvline(0, color='black', linewidth=0.5)
 plt.legend(loc='upper right', fontsize=11)

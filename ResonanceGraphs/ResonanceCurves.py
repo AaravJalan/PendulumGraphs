@@ -34,8 +34,8 @@ ax.text(0.905, 0.575, textstr, transform=ax.transAxes, fontsize=11.5,
         verticalalignment='top', bbox=props)
 
 plt.axvline(omega_0, color='r', linestyle='--', label=f"Natural Frequency $\\omega_0$")
-plt.xlabel(r'$\omega \text{ } \left(rad \text{ } s^{-1}\right)$', fontsize=13)
-plt.ylabel('Amplitude', fontsize=13)
+plt.xlabel(r'$\omega \text{ / } rad \text{ } s^{-1}$', fontsize=13, labelpad=10)
+plt.ylabel(r'$\text{Amplitude, }A$', fontsize=13, labelpad=10)
 
 # Adding Labels and Title
 plt.legend(fontsize=11)

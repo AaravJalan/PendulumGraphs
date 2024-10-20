@@ -88,12 +88,12 @@ textstr = r'$l=%.1f$' % (l, )
 
 props = dict(boxstyle='round', facecolor='white', alpha=1, edgecolor='lightgrey')
 
-ax.text(0.83, 0.965, textstr, transform=ax.transAxes, fontsize=11,
+ax.text(0.82, 0.965, textstr, transform=ax.transAxes, fontsize=12,
         verticalalignment='top', bbox=props)
 
 # Adding Labels and Title
-plt.xlabel(r'$\theta \text{ }  (rad)$', fontsize=13)
-plt.ylabel(r'$\frac{d\theta}{dt} \text{ } \left(rad \text{ } s^{-1}\right)$', fontsize=13)
+plt.xlabel(r'$\theta\text{ / } rad$', fontsize=13, labelpad=10)
+plt.ylabel(r'$\frac{d\theta}{dt} \text{ / } rad \text{ } s^{-1}$', fontsize=13, labelpad=10)
 plt.legend(fontsize=10)
 plt.xlim(-2.5*np.pi, 2.5*np.pi)
 plt.ylim(-3, 3)
