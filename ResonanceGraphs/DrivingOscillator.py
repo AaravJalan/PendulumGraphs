@@ -2,25 +2,25 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Constants
-B = 0.2
-A = 1
+beta = 0.2
+B = 1
 m = 1.0  # Mass (kg)
 w = 1.0  # Frequency of the driving force (s^-1)
 L = 9.81  # Length of pendulum (m)
 g = 9.81  # Acceleration due to gravity (m/s^2)
-F_0 = 2  # Amplitude of driving force (N)
+F_0 = 10  # Amplitude of driving force (N)
 w0 = np.sqrt(g / L)  # Natural frequency
-wd = np.sqrt(w0**2-B**2)
-phi = np.arctan(B/(np.sqrt(w0**2-B**2)))
+wd = np.sqrt(w0**2-beta**2)
+phi = np.arctan(beta/(np.sqrt(w0**2-beta**2)))
 delt = np.pi/2
 
 # Time Variable
 t = np.linspace(0, 40, 700)
 
-ht = A * np.exp(-B * t) * np.cos(w0 * t - phi)
-C = F_0 / (m * L * np.sqrt((w0**2 - w**2)**2 + (2 * B * w)**2))
+ht = B * np.exp(-beta * t) * np.cos(wd * t - phi)
+A = F_0 / (m * L * np.sqrt((w0**2 - w**2)**2 + (2 * B * w)**2))
+pt = A * np.cos(w * t - delt)
 print(A)
-pt = C * np.cos(w * t - delt)
 
 res = pt + ht
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -46,6 +46,7 @@ ax.set_yticklabels([r'$-\theta_0$', r'$-\frac{\theta_0}{2}$', r'$0$', r'$\frac{\
 
 # Text Box to Display the Parameters
 textstr = '\n'.join((
+    r'$F=%.1f$' % (F_0,),
     r'$B=%.1f$' % (B,),
     r'$A=%.1f$' % (A, ),
     r'$l=g=%.1f$' % (L, ),
@@ -53,7 +54,7 @@ textstr = '\n'.join((
 
 props = dict(boxstyle='round', facecolor='white', alpha=1, edgecolor='lightgrey')
 
-ax.text(0.87, 0.18, textstr, transform=ax.transAxes, fontsize=11,
+ax.text(0.87, 0.22, textstr, transform=ax.transAxes, fontsize=11,
         verticalalignment='top', bbox=props)
 
 plt.savefig("DrivingOscillator.png", dpi=300, bbox_inches='tight')
